@@ -7,23 +7,10 @@ import ContactForm from './Components/ContactForm/ContactForm';
 import { Section, Heading } from './App.styled';
 
 function App() {
-  // const getContacts = localStorage.getItem('contacts');
-  // const parsedContacts = JSON.parse(getContacts);
-
   const [contacts, setContacts] = useState(
     JSON.parse(localStorage.getItem('contacts')) || [],
   );
   const [filter, setFilter] = useState('');
-
-  // useEffect(() => {
-  //   if (parsedContacts?.length) {
-  //     setContacts(parsedContacts)
-  //   }}, [parsedContacts]);
-  // useEffect(() => {
-  //     const storedContacts = localStorage.getItem("contacts");
-  //     const parsedStoredContacts = JSON.parse(storedContacts);
-  //     parsedStoredContacts && setContacts(parsedStoredContacts);
-  //   }, []);
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
