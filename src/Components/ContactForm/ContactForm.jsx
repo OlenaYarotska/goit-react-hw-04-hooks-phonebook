@@ -7,8 +7,7 @@ function ContactForm({ addContact, dublicateNameCheck }) {
   const [form, setForm] = useState('');
 
   const reset = () => {
-    setName('');
-    setNumber('');
+    setForm({ name: '', number: '' });
   };
 
   const handleChange = evt => {
